@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nada Mohamed Sayed — Software Engineer</title>
+<meta name="description" content="Portfolio of Nada Mohamed Sayed, a Software Engineering graduate specializing in backend development, data analysis, data science and AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+
+<!-- ============ MOTION OVERLAYS ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <div class="wrap">
+    <a href="#home" class="logo"><span class="logo-mark">N</span> Nada Mohamed Sayed</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certificates" class="nav-link">Certificates</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <canvas class="hero-net" id="heroNet" aria-hidden="true"></canvas>
+  <div class="code-float" aria-hidden="true">
+    <span class="code-chip c1">&lt;/&gt; clean code</span>
+    <span class="code-chip c2">$ docker compose up</span>
+    <span class="code-chip c3">@RestController</span>
+    <span class="code-chip c4">git commit -m "ship it"</span>
+    <span class="code-chip c5">{ "status": 200 }</span>
+    <span class="code-chip c6">model.fit(X, y)</span>
+  </div>
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="hero-kicker">HI, I'M <span>NADA MOHAMED SAYED</span></p>
+      <h1>
+        <span class="h1-line">And I'm a</span>
+        <span class="h1-line type-wrap"><span class="accent type-target" id="typeTarget" data-roles='["Software Engineer","Backend Developer","Data Scientist","AI Enthusiast","Problem Solver"]'>Software Engineer</span><span class="caret" aria-hidden="true"></span></span>
+      </h1>
+      <p class="hero-desc">Software Engineering graduate with a strong technical background in Software Development, Backend Development, Data Analysis, Data Science, and Application Integration.</p>
+      <p class="hero-desc-2">I enjoy building practical software solutions, working with data and AI, solving problems, and continuously developing my technical skills.</p>
+      <div class="hero-actions">
+        <a href="assets/Nada_Mohamed_Sayed_CV.pdf" download="Nada_Mohamed_Sayed_CV.pdf" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://linkedin.com/in/nada-mohamad-16a630282" target="_blank" rel="noopener" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/Nada-Mohamad123" target="_blank" rel="noopener" class="social-circle" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:nadamohamadmaklouf@gmail.com" class="social-circle" aria-label="Send me an email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <div class="hero-glow"></div>
+        <div class="hero-hex">
+          <img src="assets/profile.jpg" alt="Portrait of Nada Mohamed Sayed">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="line"></span>SCROLL</div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">About</p>
+      <h2>About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>I am a <strong>Software Engineering graduate from Assiut University</strong> with a diverse technical background in Software Development, Backend Development, Data Analysis, Data Science, and Applications Integration.</p>
+        <p>I have experience building practical projects using <strong>Python, Java, C++, SQL, and Spring Boot</strong>, with knowledge of Microservices, REST APIs, Docker, Apache Kafka, and WSO2.</p>
+        <p>I am interested in <strong>Artificial Intelligence, Data Science, Backend Development</strong>, and building practical technology solutions.</p>
+      </div>
+      <div class="highlight-grid reveal">
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-solid fa-laptop-code"></i></div>
+          <h4>Software Engineering</h4>
+        </div>
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-solid fa-server"></i></div>
+          <h4>Backend Development</h4>
+        </div>
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-solid fa-chart-line"></i></div>
+          <h4>Data Science</h4>
+        </div>
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-solid fa-chart-simple"></i></div>
+          <h4>Data Analysis</h4>
+        </div>
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-solid fa-brain"></i></div>
+          <h4>Artificial Intelligence</h4>
+        </div>
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-solid fa-diagram-project"></i></div>
+          <h4>Application Integration</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-line"></div></div>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Education</p>
+      <h2>Academic Background</h2>
+    </div>
+    <div class="edu-panel reveal">
+      <div class="edu-info">
+        <p class="degree">Bachelor's Degree in Computer and Information Science</p>
+        <p class="major">Major: Software Engineering</p>
+        <div class="edu-meta">
+          <div><i class="fa-solid fa-building-columns"></i> Assiut University</div>
+          <div><i class="fa-solid fa-calendar"></i> 2022 – 2026</div>
+          <div><i class="fa-solid fa-location-dot"></i> Assiut, Egypt</div>
+        </div>
+      </div>
+      <div class="gpa-panel">
+        <div class="gpa-number" data-count="3.94">3.94</div>
+        <p class="gpa-sub">out of 4.00 GPA</p>
+        <div class="gpa-grade">Grade A</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've Worked</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="role">Applications Development Integration</p>
+          <p class="org">Ejada Systems</p>
+          <div class="timeline-meta">
+            <span><i class="fa-solid fa-calendar"></i> August 2025 – September 2025</span>
+            <span><i class="fa-solid fa-location-dot"></i> Assiut, Egypt</span>
+          </div>
+          <p class="desc">Gained hands-on experience in application integration and backend development, working with enterprise integration technologies and developing practical software solutions in a professional environment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-line"></div></div>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Projects</p>
+      <h2>Selected Work</h2>
+      <p>A mix of graduation research, backend systems, and data-driven applications.</p>
+    </div>
+
+    <!-- Featured project -->
+    <div class="project-featured reveal">
+      <span class="featured-tag"><i class="fa-solid fa-star"></i> Featured — Graduation Project</span>
+      <h3>GuardianAI — Real-Time Child Safety Mobile Application</h3>
+      <p class="p-type">AI-powered detection system · Aug 2025 – Jun 2026</p>
+      <p class="desc">Developed a real-time child safety system that detects inappropriate content, violence, and toxic speech using AI-powered detection models. Built independent microservices for nudity detection, violence detection, and toxic speech analysis, enabling real-time monitoring and response.</p>
+      <p class="project-role"><strong>My role:</strong> Backend development, microservices implementation, AI service integration, and real-time communication.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">AI</span><span class="tech-tag">Microservices</span><span class="tech-tag">Computer Vision</span>
+        <span class="tech-tag">NLP</span><span class="tech-tag">YOLOv8</span><span class="tech-tag">Whisper</span>
+        <span class="tech-tag">ToxicBERT</span><span class="tech-tag">WebSockets</span>
+      </div>
+      <div class="project-footer">
+        <span class="project-date">August 2025 – June 2026</span>
+        <div class="project-links">
+          <a href="https://github.com/Nada-Mohamad123/Guardian-AI" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      <!-- Project 1 -->
+      <div class="project-card reveal">
+        <h4>BookStore Web Application</h4>
+        <p class="desc">Full-stack e-commerce bookstore using MVC and Entity Framework Core, featuring browsing, cart, checkout, an admin dashboard for catalog and order management, and secure Identity authentication with 2FA and email confirmation.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">ASP.NET Core MVC</span><span class="tech-tag">EF Core</span>
+          <span class="tech-tag">SQL Server</span><span class="tech-tag">Identity / 2FA</span>
+          <span class="tech-tag">RBAC</span><span class="tech-tag">Bootstrap 5</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-date">Jun 2026 – Aug 2026</span>
+          <div class="project-links">
+            <a href="https://github.com/Nada-Mohamad123/BookStore" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal">
+        <h4>Colorectal Cancer Prediction</h4>
+        <p class="desc">Combined KNN and Naive Bayes models through an Ensemble approach for improved accuracy. Integrated PostgreSQL for data persistence, containerized with Docker, and implemented multilingual support for English, Arabic RTL, and French.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Flask</span><span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">KNN</span><span class="tech-tag">Naive Bayes</span>
+          <span class="tech-tag">Docker</span><span class="tech-tag">PostgreSQL</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-date">May 2026 – Jun 2026</span>
+          <div class="project-links">
+            <a href="https://github.com/Nada-Mohamad123/Colorectal_Cancer_Prediction" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card reveal">
+        <h4>Virtual Bank System</h4>
+        <p class="desc">Virtual banking system with user authentication, account and transaction management, a Backend-for-Frontend (BFF), centralized API management through WSO2 API Gateway, Kafka-based logging, and Docker containerization.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span>
+          <span class="tech-tag">Microservices</span><span class="tech-tag">WSO2</span>
+          <span class="tech-tag">Kafka</span><span class="tech-tag">Docker</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-date">Aug 2025 – Sep 2025</span>
+          <div class="project-links">
+            <a href="https://github.com/Nada-Mohamad123/Virtual_Bank_System" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card reveal">
+        <h4>HealthyBytes</h4>
+        <p class="desc">A Flask web application for exploring categorized recipes with detailed nutritional information to promote healthy eating.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Flask</span><span class="tech-tag">Python</span>
+          <span class="tech-tag">Recipe Management</span><span class="tech-tag">Nutrition Data</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-date">Apr 2025 – May 2025</span>
+          <div class="project-links">
+            <a href="https://github.com/Nada-Mohamad123/HealthyBytes" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card reveal">
+        <h4>ToDoList</h4>
+        <p class="desc">A Flask-based task management application with create, read, and update features, containerized using Docker for easy deployment.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Flask</span><span class="tech-tag">Python</span><span class="tech-tag">Docker</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-date">Apr 2025 – May 2025</span>
+          <div class="project-links">
+            <a href="https://github.com/Nada-Mohamad123/Flask_website-todolist-" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-card reveal">
+        <h4>Udemy Courses Analysis</h4>
+        <p class="desc">Analyzed datasets using Python, performed exploratory data analysis (EDA), and presented insights with visualizations. Final project of the NTI internship.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">Jupyter</span>
+          <span class="tech-tag">Pandas</span><span class="tech-tag">NumPy</span>
+          <span class="tech-tag">Matplotlib</span><span class="tech-tag">Scikit-learn</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-date">Aug 2024 – Sep 2024</span>
+          <div class="project-links">
+            <a href="https://github.com/Nada-Mohamad123/Udemy-Courses-Analysis" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-line"></div></div>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Skills</p>
+      <h2>Technical Toolkit</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-code"></i> Programming Languages</h4>
+        <div class="badge-row">
+          <span class="badge">Python</span><span class="badge">Java</span><span class="badge">C</span>
+          <span class="badge">C++</span><span class="badge">C#</span><span class="badge">SQL</span><span class="badge">Kotlin</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-robot"></i> Machine Learning & AI</h4>
+        <div class="badge-row">
+          <span class="badge">Scikit-learn</span><span class="badge">Pandas</span><span class="badge">NumPy</span>
+          <span class="badge">Data Preprocessing</span><span class="badge">Model Training</span><span class="badge">Model Evaluation</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-diagram-project"></i> Application Integration</h4>
+        <div class="badge-row">
+          <span class="badge">REST & API Integration</span><span class="badge">Microservices</span>
+          <span class="badge">Kafka & WebSockets</span><span class="badge">Spring Integration & WSO2</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-chart-simple"></i> Data Analysis</h4>
+        <div class="badge-row">
+          <span class="badge">Excel</span><span class="badge">Power BI</span><span class="badge">Tableau</span>
+          <span class="badge">Python</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span><span class="badge">Seaborn</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-toolbox"></i> Frameworks & Tools</h4>
+        <div class="badge-row">
+          <span class="badge">Spring Boot</span><span class="badge">Flask</span><span class="badge">Git</span>
+          <span class="badge">Jupyter Notebook</span><span class="badge">VS Code</span><span class="badge">Docker</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-people-group"></i> Soft Skills</h4>
+        <div class="badge-row">
+          <span class="badge">Teamwork</span><span class="badge">Problem Solving</span><span class="badge">Communication</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-line"></div></div>
+
+<!-- ============ CERTIFICATES ============ -->
+<section id="certificates">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Certificates</p>
+      <h2>Certificates &amp; Courses</h2>
+      <p>Every certificate I've earned — training programmes, internships, community work and competitions — collected in one place.</p>
+    </div>
+
+    <div class="cert-filters reveal" id="certFilters">
+      <button class="cert-filter active" data-filter="all">All <span class="f-count">6</span></button>
+      <button class="cert-filter" data-filter="training">Training &amp; Courses <span class="f-count">3</span></button>
+      <button class="cert-filter" data-filter="internship">Internship <span class="f-count">1</span></button>
+      <button class="cert-filter" data-filter="community">Community <span class="f-count">1</span></button>
+      <button class="cert-filter" data-filter="competition">Competition <span class="f-count">1</span></button>
+    </div>
+
+    <div class="cert-grid" id="certGrid">
+
+      <!-- 1. DEPI (in progress, no certificate yet) -->
+      <article class="cert-card reveal" data-cat="training">
+        <div class="cert-shot cert-shot-empty">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <span>Certificate pending</span>
+        </div>
+        <div class="cert-body">
+          <div class="cert-tags">
+            <span class="cert-cat">Training</span>
+            <span class="cert-status live">In progress</span>
+          </div>
+          <h4>AI &amp; Data Science Track</h4>
+          <p class="cert-org">Digital Egypt Pioneers Initiative (DEPI)</p>
+          <p class="cert-meta"><i class="fa-solid fa-calendar"></i> June 2026 – Present &nbsp;·&nbsp; <i class="fa-solid fa-location-dot"></i> Assiut, Egypt</p>
+          <p class="desc">A government-backed intensive track in artificial intelligence and data science, covering machine learning workflows, data handling and applied AI projects.</p>
+        </div>
+      </article>
+
+      <!-- 2. ITIDA / NTI -->
+      <article class="cert-card reveal" data-cat="training">
+        <button class="cert-shot" data-lightbox="assets/nti_certificate.jpg" aria-label="Enlarge the ITIDA / NTI certificate">
+          <img src="assets/nti_certificate.jpg" alt="Certificate of Training — Data Analysis Skills for the Freelance Professional, issued by ITIDA and NTI" loading="lazy">
+          <span class="cert-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+        </button>
+        <div class="cert-body">
+          <div class="cert-tags"><span class="cert-cat">Training</span></div>
+          <h4>Data Analysis Skills for the Freelance Professional</h4>
+          <p class="cert-org">ITIDA · National Telecommunication Institute (NTI)</p>
+          <p class="cert-meta"><i class="fa-solid fa-calendar"></i> 18 Aug – 12 Sep 2024 &nbsp;·&nbsp; <i class="fa-solid fa-clock"></i> 4 weeks / 120 hours</p>
+          <p class="desc">Summer training covering practical data analysis, plus freelancing fundamentals: service definition, pricing structures, project management and proposal writing.</p>
+        </div>
+      </article>
+
+      <!-- 3. Ejada internship -->
+      <article class="cert-card reveal" data-cat="internship">
+        <button class="cert-shot" data-lightbox="assets/ejada_certificate.jpg" aria-label="Enlarge the Ejada Systems internship certificate">
+          <img src="assets/ejada_certificate.jpg" alt="Internship Completion Certificate from Ejada Systems Company" loading="lazy">
+          <span class="cert-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+        </button>
+        <div class="cert-body">
+          <div class="cert-tags"><span class="cert-cat">Internship</span></div>
+          <h4>Internship Completion — Applications Development Integration</h4>
+          <p class="cert-org">Ejada Systems Company</p>
+          <p class="cert-meta"><i class="fa-solid fa-calendar"></i> August 2025 – September 2025 &nbsp;·&nbsp; <i class="fa-solid fa-location-dot"></i> Assiut, Egypt</p>
+          <p class="desc">Awarded by the Enterprise Applications Development Integration department in recognition of contributions during the internship period.</p>
+          <a href="#experience" class="cert-link"><i class="fa-solid fa-arrow-right-long"></i> See what I worked on</a>
+        </div>
+      </article>
+
+      <!-- 4. GDG On Campus -->
+      <article class="cert-card reveal" data-cat="community">
+        <button class="cert-shot" data-lightbox="assets/gdg_certificate.jpg" aria-label="Enlarge the GDG On Campus certificate">
+          <img src="assets/gdg_certificate.jpg" alt="Certificate of Appreciation — Google Developer Group On Campus, Assiut University, Data Analysis Member" loading="lazy">
+          <span class="cert-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+        </button>
+        <div class="cert-body">
+          <div class="cert-tags"><span class="cert-cat">Community</span></div>
+          <h4>Certificate of Appreciation — Data Analysis Member</h4>
+          <p class="cert-org">Google Developer Group On Campus · Assiut University</p>
+          <p class="cert-meta"><i class="fa-solid fa-calendar"></i> 2024 – 2025 academic year &nbsp;·&nbsp; <i class="fa-solid fa-hashtag"></i> AU-GDG01-AALAA-V1OLJ2</p>
+          <p class="desc">Awarded for serving a full academic year as a Data Analysis member in a Google-affiliated student developer community.</p>
+          <a href="#activities" class="cert-link"><i class="fa-solid fa-arrow-right-long"></i> More about this role</a>
+        </div>
+      </article>
+
+      <!-- 5. ICPC ECPC (two certificates) -->
+      <article class="cert-card reveal" data-cat="competition">
+        <button class="cert-shot"
+                data-lightbox="assets/icpc_certificate.jpg"
+                data-gallery='["assets/icpc_certificate.jpg","assets/icpc_certificate_team.jpg"]'
+                aria-label="Enlarge the ICPC ECPC certificates">
+          <img src="assets/icpc_certificate.jpg" alt="ICPC Certificate of Achievement — 2024 ECPC Qualifications, Assiut University" loading="lazy">
+          <span class="cert-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+          <span class="cert-count"><i class="fa-regular fa-images"></i> 2</span>
+        </button>
+        <div class="cert-body">
+          <div class="cert-tags"><span class="cert-cat">Competition</span></div>
+          <h4>Certificate of Achievement — ICPC ECPC Qualifications 2024</h4>
+          <p class="cert-org">International Collegiate Programming Contest</p>
+          <p class="cert-meta"><i class="fa-solid fa-calendar"></i> 25 July 2024 &nbsp;·&nbsp; <i class="fa-solid fa-ranking-star"></i> 151st place</p>
+          <p class="desc">Individual and team certificates from the 2024 ECPC Qualifications (Day 6), competing for Assiut University alongside Sohila Ahmed Usama and Jannah Ayman, coached by Hussien Ibrahiem.</p>
+        </div>
+      </article>
+
+      <!-- 6. Bionic C++ workshop -->
+      <article class="cert-card reveal" data-cat="training">
+        <button class="cert-shot" data-lightbox="assets/bionic_certificate.jpg" aria-label="Enlarge the Bionic C++ workshop certificate">
+          <img src="assets/bionic_certificate.jpg" alt="Certificate of Appreciation — Basics of C++ workshop by Bionic" loading="lazy">
+          <span class="cert-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+        </button>
+        <div class="cert-body">
+          <div class="cert-tags"><span class="cert-cat">Training</span></div>
+          <h4>Basics of C++ — Workshop</h4>
+          <p class="cert-org">Bionic</p>
+          <p class="cert-meta"><i class="fa-solid fa-calendar"></i> 24 – 26 March 2023 &nbsp;·&nbsp; <i class="fa-solid fa-chalkboard-user"></i> 3-day workshop</p>
+          <p class="desc">An early hands-on workshop on C++ fundamentals — syntax, control flow, functions and the object-oriented basics that later fed into competitive programming.</p>
+        </div>
+      </article>
+
+    </div>
+    <p class="cert-empty" id="certEmpty">Nothing in this category yet.</p>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES + LANGUAGES ============ -->
+<section id="activities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Beyond the Classroom</p>
+      <h2>Activities &amp; Languages</h2>
+      <p>Community work and competitive programming alongside my degree. The certificates for these live in the <a href="#certificates" class="inline-link">Certificates</a> section.</p>
+    </div>
+    <div class="act-lang-grid">
+      <div class="reveal">
+
+        <div class="activity-card">
+          <div class="activity-head">
+            <span class="activity-ic"><i class="fa-brands fa-google"></i></span>
+            <div>
+              <h4>Data Analysis Member</h4>
+              <p class="activity-org">GDG On Campus · Assiut University</p>
+            </div>
+            <span class="activity-year">2024 – 2025</span>
+          </div>
+          <p>A full academic year inside a Google-affiliated student developer community, working on the data analysis side of the chapter.</p>
+          <ul class="activity-points">
+            <li>Took part in the chapter's data analysis sessions and hands-on workshops.</li>
+            <li>Practised the full analysis flow — cleaning, exploring and visualising real datasets.</li>
+            <li>Worked alongside other members on shared learning material and peer support.</li>
+            <li>Built the habit of explaining technical findings to a mixed-experience audience.</li>
+          </ul>
+          <a href="#certificates" class="cert-link"><i class="fa-regular fa-award"></i> View the certificate</a>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-head">
+            <span class="activity-ic"><i class="fa-solid fa-code"></i></span>
+            <div>
+              <h4>ICPC ECPC Qualifications — Competitive Programming</h4>
+              <p class="activity-org">International Collegiate Programming Contest</p>
+            </div>
+            <span class="activity-year">2024</span>
+          </div>
+          <p>Competed in the 2024 ECPC Qualifications representing Assiut University — a timed, team-based algorithmic contest under the ICPC umbrella.</p>
+          <ul class="activity-points">
+            <li>Placed <strong>151st</strong> in the Day 6 qualification round, 25 July 2024.</li>
+            <li>Team of three: Sohila Ahmed Usama, Jannah Ayman and myself, coached by Hussien Ibrahiem.</li>
+            <li>Sharpened data structures, algorithms and time-boxed problem solving under pressure.</li>
+            <li>Practised dividing problems across a team and debugging fast against a live scoreboard.</li>
+          </ul>
+          <a href="#certificates" class="cert-link"><i class="fa-regular fa-award"></i> View the certificates</a>
+        </div>
+
+      </div>
+      <div class="reveal">
+        <div class="lang-card">
+          <span class="lang-name">Arabic</span>
+          <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-card">
+          <span class="lang-name">English</span>
+          <span class="lang-level">Intermediate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-line"></div></div>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's Work Together</h2>
+      <p>I'm always interested in learning, building useful solutions, and working on real-world technology projects.</p>
+      <div class="contact-list">
+        <div class="contact-row">
+          <a href="mailto:nadamohamadmaklouf@gmail.com" aria-label="Send me an email">
+            <span class="ic"><i class="fa-solid fa-envelope"></i></span> nadamohamadmaklouf@gmail.com
+          </a>
+          <button type="button" class="copy-btn copy-email" data-email="nadamohamadmaklouf@gmail.com" aria-label="Copy email address" title="Copy email address">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+        <a href="tel:+201145002747"><span class="ic"><i class="fa-solid fa-phone"></i></span> +20 114 500 2747</a>
+        <a href="https://linkedin.com/in/nada-mohamad-16a630282" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-linkedin-in"></i></span> linkedin.com/in/nada-mohamad-16a630282</a>
+        <a href="https://github.com/Nada-Mohamad123" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-github"></i></span> github.com/Nada-Mohamad123</a>
+      </div>
+    </div>
+    <form class="contact-form reveal" id="contactForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit" id="formSubmit">
+        <span class="btn-label"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="form-note">Your message is delivered straight to my inbox. Prefer your own mail app? <a href="mailto:nadamohamadmaklouf@gmail.com">Email me directly</a> or <button type="button" class="copy-email-inline copy-email" data-email="nadamohamadmaklouf@gmail.com">copy the address</button>.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <p class="foot-copy">© 2026 Nada Mohamed Sayed. All Rights Reserved.</p>
+    <div class="foot-socials">
+      <a href="https://linkedin.com/in/nada-mohamad-16a630282" target="_blank" rel="noopener" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/Nada-Mohamad123" target="_blank" rel="noopener" class="social-circle" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:nadamohamadmaklouf@gmail.com" class="social-circle" aria-label="Send me an email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous certificate"><i class="fa-solid fa-chevron-left"></i></button>
+  <img src="" alt="Certificate preview" id="lightboxImg">
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="Next certificate"><i class="fa-solid fa-chevron-right"></i></button>
+  <span class="lightbox-counter" id="lightboxCounter"></span>
+</div>
+
+<script src="script.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>
