@@ -3,18 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nada Mohamed Sayed — Software Engineer</title>
-<meta name="description" content="Portfolio of Nada Mohamed Sayed, a Software Engineering graduate specializing in backend development, data analysis, data science and AI.">
+<title>Nada Mohamed Sayed — Backend Developer</title>
+<meta name="description" content="Nada Mohamed Sayed, Backend Developer. REST APIs, microservices and application integration with Java, Spring Boot, Python, Flask and ASP.NET Core.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="motion.css">
+<script>
+  // Apply the saved (or system) theme before first paint so there is no flash.
+  (function(){
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') {
+      t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
 </head>
 <body>
 
 <!-- ============ MOTION OVERLAYS ============ -->
 <div class="scroll-progress" id="scrollProgress"></div>
+<div class="bg-orbs" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+<canvas class="bg-net" id="bgNet" aria-hidden="true"></canvas>
 <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
@@ -25,41 +38,48 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="nav-link active">Home</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#certificates" class="nav-link">Certificates</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+        <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+        <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
   </div>
 </nav>
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="home">
-  <canvas class="hero-net" id="heroNet" aria-hidden="true"></canvas>
-  <div class="code-float" aria-hidden="true">
+    <div class="code-float" aria-hidden="true">
     <span class="code-chip c1">&lt;/&gt; clean code</span>
     <span class="code-chip c2">$ docker compose up</span>
     <span class="code-chip c3">@RestController</span>
     <span class="code-chip c4">git commit -m "ship it"</span>
     <span class="code-chip c5">{ "status": 200 }</span>
-    <span class="code-chip c6">model.fit(X, y)</span>
+    <span class="code-chip c6">SELECT * FROM orders;</span>
   </div>
   <div class="wrap">
     <div class="hero-text">
-      <p class="hero-kicker">HI, I'M <span>NADA MOHAMED SAYED</span></p>
+      <p class="hero-kicker">Hello, I'm</p>
       <h1>
-        <span class="h1-line">And I'm a</span>
-        <span class="h1-line type-wrap"><span class="accent type-target" id="typeTarget" data-roles='["Software Engineer","Backend Developer","Data Scientist","AI Enthusiast","Problem Solver"]'>Software Engineer</span><span class="caret" aria-hidden="true"></span></span>
+        <span class="h1-name">Nada Mohamed Sayed</span>
+        <span class="h1-line type-wrap"><span class="accent type-target" id="typeTarget" data-roles='["Backend Developer"]'>Backend Developer</span><span class="caret" aria-hidden="true"></span></span>
       </h1>
-      <p class="hero-desc">Software Engineering graduate with a strong technical background in Software Development, Backend Development, Data Analysis, Data Science, and Application Integration.</p>
-      <p class="hero-desc-2">I enjoy building practical software solutions, working with data and AI, solving problems, and continuously developing my technical skills.</p>
+      <p class="hero-desc">I build the server side of web and mobile products: REST APIs, microservices, databases and the integrations that connect your systems. My main tools are Java and Spring Boot, Python and Flask, and ASP.NET Core.</p>
+      <p class="hero-desc-2">Available for backend and integration work, from a single API to a multi-service system.</p>
       <div class="hero-actions">
-        <a href="assets/Nada_Mohamed_Sayed_CV.pdf" download="Nada_Mohamed_Sayed_CV.pdf" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
-        <a href="#projects" class="btn btn-outline">View Projects</a>
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+        <a href="#services" class="btn btn-outline">View Services</a>
+        <a href="assets/Nada_Mohamed_Sayed_CV.pdf" download="Nada_Mohamed_Sayed_CV.pdf" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
       </div>
       <div class="hero-socials">
         <a href="https://linkedin.com/in/nada-mohamad-16a630282" target="_blank" rel="noopener" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -83,39 +103,39 @@
 <section id="about">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">About</p>
+      <p class="eyebrow">01</p>
       <h2>About Me</h2>
     </div>
     <div class="about-grid">
       <div class="about-copy reveal">
-        <p>I am a <strong>Software Engineering graduate from Assiut University</strong> with a diverse technical background in Software Development, Backend Development, Data Analysis, Data Science, and Applications Integration.</p>
-        <p>I have experience building practical projects using <strong>Python, Java, C++, SQL, and Spring Boot</strong>, with knowledge of Microservices, REST APIs, Docker, Apache Kafka, and WSO2.</p>
-        <p>I am interested in <strong>Artificial Intelligence, Data Science, Backend Development</strong>, and building practical technology solutions.</p>
+        <p>I am a <strong>Backend Developer</strong>. I build the part of an application that users never see but depend on: the APIs, the authentication, the database and the connections between systems.</p>
+        <p>I work with <strong>Java and Spring Boot, Python and Flask, and ASP.NET Core</strong>, and store data in <strong>SQL Server and PostgreSQL</strong>. For larger systems I split the work into microservices and connect them with <strong>WSO2 API Gateway, Apache Kafka and WebSockets</strong>.</p>
+        <p>My projects include a banking back end, an online bookstore with secure login, and a real-time content-safety system. Several of them are packaged with Docker, so they run the same way on any machine.</p>
       </div>
       <div class="highlight-grid reveal">
-        <div class="highlight-card">
-          <div class="ic"><i class="fa-solid fa-laptop-code"></i></div>
-          <h4>Software Engineering</h4>
-        </div>
         <div class="highlight-card">
           <div class="ic"><i class="fa-solid fa-server"></i></div>
           <h4>Backend Development</h4>
         </div>
         <div class="highlight-card">
-          <div class="ic"><i class="fa-solid fa-chart-line"></i></div>
-          <h4>Data Science</h4>
+          <div class="ic"><i class="fa-solid fa-plug"></i></div>
+          <h4>REST APIs</h4>
         </div>
         <div class="highlight-card">
-          <div class="ic"><i class="fa-solid fa-chart-simple"></i></div>
-          <h4>Data Analysis</h4>
-        </div>
-        <div class="highlight-card">
-          <div class="ic"><i class="fa-solid fa-brain"></i></div>
-          <h4>Artificial Intelligence</h4>
+          <div class="ic"><i class="fa-solid fa-cubes"></i></div>
+          <h4>Microservices</h4>
         </div>
         <div class="highlight-card">
           <div class="ic"><i class="fa-solid fa-diagram-project"></i></div>
           <h4>Application Integration</h4>
+        </div>
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-solid fa-database"></i></div>
+          <h4>Databases</h4>
+        </div>
+        <div class="highlight-card">
+          <div class="ic"><i class="fa-brands fa-docker"></i></div>
+          <h4>Docker</h4>
         </div>
       </div>
     </div>
@@ -124,49 +144,150 @@
 
 <div class="wrap"><div class="divider-line"></div></div>
 
-<!-- ============ EDUCATION ============ -->
-<section id="education">
+<div class="wrap"><div class="divider-line"></div></div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Education</p>
-      <h2>Academic Background</h2>
+      <p class="eyebrow">02</p>
+      <h2>Services</h2>
+      <p>The backend work I can take on, and what you get from each one.</p>
     </div>
-    <div class="edu-panel reveal">
-      <div class="edu-info">
-        <p class="degree">Bachelor's Degree in Computer and Information Science</p>
-        <p class="major">Major: Software Engineering</p>
-        <div class="edu-meta">
-          <div><i class="fa-solid fa-building-columns"></i> Assiut University</div>
-          <div><i class="fa-solid fa-calendar"></i> 2022 – 2026</div>
-          <div><i class="fa-solid fa-location-dot"></i> Assiut, Egypt</div>
+    <div class="service-grid">
+
+      <article class="service-card reveal">
+        <div class="service-ic"><i class="fa-solid fa-plug"></i></div>
+        <h4>Backend &amp; REST API Development</h4>
+        <p class="desc">I design and build the API that your website or mobile app talks to: endpoints, validation, business logic and error handling.</p>
+        <p class="service-get"><strong>You get:</strong> a working API with clear endpoints that your front-end team can start using straight away.</p>
+        <div class="badge-row">
+          <span class="badge">Java</span><span class="badge">Spring Boot</span><span class="badge">Python</span><span class="badge">Flask</span><span class="badge">ASP.NET Core</span>
         </div>
-      </div>
-      <div class="gpa-panel">
-        <div class="gpa-number" data-count="3.94">3.94</div>
-        <p class="gpa-sub">out of 4.00 GPA</p>
-        <div class="gpa-grade">Grade A</div>
-      </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-ic"><i class="fa-solid fa-cubes"></i></div>
+        <h4>Microservices &amp; Docker</h4>
+        <p class="desc">I split a growing application into independent services, each with one job, and package them in containers.</p>
+        <p class="service-get"><strong>You get:</strong> services that are easier to change, test and deploy one at a time.</p>
+        <div class="badge-row">
+          <span class="badge">Microservices</span><span class="badge">Spring Boot</span><span class="badge">Docker</span><span class="badge">WebSockets</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-ic"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>Application Integration</h4>
+        <p class="desc">I connect separate systems through an API gateway and a message broker so they can exchange data reliably.</p>
+        <p class="service-get"><strong>You get:</strong> one controlled entry point for your APIs and event-based communication between services, as in my Virtual Bank project.</p>
+        <div class="badge-row">
+          <span class="badge">WSO2 API Gateway</span><span class="badge">Apache Kafka</span><span class="badge">Spring Integration</span><span class="badge">REST</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-ic"><i class="fa-solid fa-database"></i></div>
+        <h4>Database Design &amp; Integration</h4>
+        <p class="desc">I model your data, write the queries and build the data-access layer that the rest of the application relies on.</p>
+        <p class="service-get"><strong>You get:</strong> a clean schema and a persistence layer that keeps your data consistent.</p>
+        <div class="badge-row">
+          <span class="badge">SQL Server</span><span class="badge">PostgreSQL</span><span class="badge">SQL</span><span class="badge">EF Core</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-ic"><i class="fa-solid fa-user-shield"></i></div>
+        <h4>Authentication &amp; Security</h4>
+        <p class="desc">I add sign-up, login, roles and account protection to your application.</p>
+        <p class="service-get"><strong>You get:</strong> role-based access, email confirmation and two-factor login, as built in my BookStore project.</p>
+        <div class="badge-row">
+          <span class="badge">ASP.NET Identity</span><span class="badge">2FA</span><span class="badge">RBAC</span><span class="badge">Email confirmation</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-ic"><i class="fa-solid fa-robot"></i></div>
+        <h4>AI Model Integration</h4>
+        <p class="desc">I put a trained machine learning model behind an API and connect it to the rest of your system, including real-time use cases.</p>
+        <p class="service-get"><strong>You get:</strong> a model your application can call like any other service, as in GuardianAI and my cancer prediction app.</p>
+        <div class="badge-row">
+          <span class="badge">Flask</span><span class="badge">Scikit-learn</span><span class="badge">YOLOv8</span><span class="badge">Whisper</span>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
-<section id="experience">
+<div class="wrap"><div class="divider-line"></div></div>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Experience</p>
-      <h2>Where I've Worked</h2>
+      <p class="eyebrow">03</p>
+      <h2>Skills</h2>
+      <p>The languages, frameworks and tools I use, grouped by what they are used for.</p>
     </div>
-    <div class="timeline reveal">
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <p class="role">Applications Development Integration</p>
-          <p class="org">Ejada Systems</p>
-          <div class="timeline-meta">
-            <span><i class="fa-solid fa-calendar"></i> August 2025 – September 2025</span>
-            <span><i class="fa-solid fa-location-dot"></i> Assiut, Egypt</span>
-          </div>
-          <p class="desc">Gained hands-on experience in application integration and backend development, working with enterprise integration technologies and developing practical software solutions in a professional environment.</p>
+
+    <div class="marquee reveal" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Java</span><span>Spring Boot</span><span>Python</span><span>Flask</span><span>ASP.NET Core</span><span>SQL Server</span><span>PostgreSQL</span><span>Docker</span><span>Kafka</span><span>WSO2</span><span>REST APIs</span><span>Git</span>
+        <span>Java</span><span>Spring Boot</span><span>Python</span><span>Flask</span><span>ASP.NET Core</span><span>SQL Server</span><span>PostgreSQL</span><span>Docker</span><span>Kafka</span><span>WSO2</span><span>REST APIs</span><span>Git</span>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-code"></i> Programming Languages</h4>
+        <p class="skill-note">For APIs, services and scripts.</p>
+        <div class="badge-row">
+          <span class="badge">Java</span><span class="badge">Python</span><span class="badge">C#</span><span class="badge">C++</span><span class="badge">C</span><span class="badge">SQL</span><span class="badge">Kotlin</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-server"></i> Backend Frameworks</h4>
+        <p class="skill-note">For building the server side of your product.</p>
+        <div class="badge-row">
+          <span class="badge">Spring Boot</span><span class="badge">Flask</span><span class="badge">ASP.NET Core MVC</span><span class="badge">Entity Framework Core</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-database"></i> Databases</h4>
+        <p class="skill-note">For storing and querying your data.</p>
+        <div class="badge-row">
+          <span class="badge">SQL Server</span><span class="badge">PostgreSQL</span><span class="badge">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-diagram-project"></i> APIs &amp; Integration</h4>
+        <p class="skill-note">For connecting systems together.</p>
+        <div class="badge-row">
+          <span class="badge">REST APIs</span><span class="badge">Microservices</span><span class="badge">WSO2 API Gateway</span>
+          <span class="badge">Apache Kafka</span><span class="badge">WebSockets</span><span class="badge">Spring Integration</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-toolbox"></i> Tools</h4>
+        <p class="skill-note">For building, packaging and sharing code.</p>
+        <div class="badge-row">
+          <span class="badge">Docker</span><span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">VS Code</span><span class="badge">Jupyter Notebook</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-chart-simple"></i> Data &amp; Machine Learning</h4>
+        <p class="skill-note">For analysing data and serving models.</p>
+        <div class="badge-row">
+          <span class="badge">Pandas</span><span class="badge">NumPy</span><span class="badge">Scikit-learn</span><span class="badge">Matplotlib</span><span class="badge">Seaborn</span>
+          <span class="badge">Excel</span><span class="badge">Power BI</span><span class="badge">Tableau</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><i class="fa-solid fa-people-group"></i> Soft Skills</h4>
+        <p class="skill-note">For working well with your team.</p>
+        <div class="badge-row">
+          <span class="badge">Teamwork</span><span class="badge">Problem Solving</span><span class="badge">Communication</span>
         </div>
       </div>
     </div>
@@ -179,18 +300,21 @@
 <section id="projects">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Projects</p>
-      <h2>Selected Work</h2>
-      <p>A mix of graduation research, backend systems, and data-driven applications.</p>
+      <p class="eyebrow">04</p>
+      <h2>Projects</h2>
+      <p>Backend systems, integrations and data applications I have built.</p>
     </div>
 
     <!-- Featured project -->
     <div class="project-featured reveal">
-      <span class="featured-tag"><i class="fa-solid fa-star"></i> Featured — Graduation Project</span>
+      <div class="project-shot project-shot-featured"><img src="assets/projects/guardianai.svg" alt="GuardianAI architecture: three AI detection services feeding a backend and a mobile app" loading="lazy"></div>
+      <div class="featured-body">
+      <span class="featured-tag"><i class="fa-solid fa-star"></i> Featured Project</span>
       <h3>GuardianAI — Real-Time Child Safety Mobile Application</h3>
       <p class="p-type">AI-powered detection system · Aug 2025 – Jun 2026</p>
       <p class="desc">Developed a real-time child safety system that detects inappropriate content, violence, and toxic speech using AI-powered detection models. Built independent microservices for nudity detection, violence detection, and toxic speech analysis, enabling real-time monitoring and response.</p>
       <p class="project-role"><strong>My role:</strong> Backend development, microservices implementation, AI service integration, and real-time communication.</p>
+      <p class="project-value"><strong>What it shows:</strong> AI models running as separate services behind a backend that responds as content arrives.</p>
       <div class="tech-tags">
         <span class="tech-tag">AI</span><span class="tech-tag">Microservices</span><span class="tech-tag">Computer Vision</span>
         <span class="tech-tag">NLP</span><span class="tech-tag">YOLOv8</span><span class="tech-tag">Whisper</span>
@@ -202,11 +326,14 @@
           <a href="https://github.com/Nada-Mohamad123/Guardian-AI" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
         </div>
       </div>
+      </div>
     </div>
 
     <div class="project-grid">
       <!-- Project 1 -->
       <div class="project-card reveal">
+        <div class="project-shot"><img src="assets/projects/bookstore.svg" alt="BookStore: storefront, shopping cart and admin dashboard" loading="lazy"></div>
+        <div class="project-body">
         <h4>BookStore Web Application</h4>
         <p class="desc">Full-stack e-commerce bookstore using MVC and Entity Framework Core, featuring browsing, cart, checkout, an admin dashboard for catalog and order management, and secure Identity authentication with 2FA and email confirmation.</p>
         <div class="tech-tags">
@@ -214,16 +341,20 @@
           <span class="tech-tag">SQL Server</span><span class="tech-tag">Identity / 2FA</span>
           <span class="tech-tag">RBAC</span><span class="tech-tag">Bootstrap 5</span>
         </div>
+        <p class="project-value"><strong>What it shows:</strong> Complete online store back end: catalog, orders, admin tools and secure login.</p>
         <div class="project-footer">
           <span class="project-date">Jun 2026 – Aug 2026</span>
           <div class="project-links">
             <a href="https://github.com/Nada-Mohamad123/BookStore" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Project 3 -->
       <div class="project-card reveal">
+        <div class="project-shot"><img src="assets/projects/colorectal.svg" alt="Colorectal Cancer Prediction: KNN and Naive Bayes combined into one ensemble model" loading="lazy"></div>
+        <div class="project-body">
         <h4>Colorectal Cancer Prediction</h4>
         <p class="desc">Combined KNN and Naive Bayes models through an Ensemble approach for improved accuracy. Integrated PostgreSQL for data persistence, containerized with Docker, and implemented multilingual support for English, Arabic RTL, and French.</p>
         <div class="tech-tags">
@@ -231,16 +362,20 @@
           <span class="tech-tag">KNN</span><span class="tech-tag">Naive Bayes</span>
           <span class="tech-tag">Docker</span><span class="tech-tag">PostgreSQL</span>
         </div>
+        <p class="project-value"><strong>What it shows:</strong> A trained model served through a web app with a database and Docker.</p>
         <div class="project-footer">
           <span class="project-date">May 2026 – Jun 2026</span>
           <div class="project-links">
             <a href="https://github.com/Nada-Mohamad123/Colorectal_Cancer_Prediction" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Project 4 -->
       <div class="project-card reveal">
+        <div class="project-shot"><img src="assets/projects/virtualbank.svg" alt="Virtual Bank System: client, BFF, WSO2 gateway, three services and Kafka logging" loading="lazy"></div>
+        <div class="project-body">
         <h4>Virtual Bank System</h4>
         <p class="desc">Virtual banking system with user authentication, account and transaction management, a Backend-for-Frontend (BFF), centralized API management through WSO2 API Gateway, Kafka-based logging, and Docker containerization.</p>
         <div class="tech-tags">
@@ -248,47 +383,59 @@
           <span class="tech-tag">Microservices</span><span class="tech-tag">WSO2</span>
           <span class="tech-tag">Kafka</span><span class="tech-tag">Docker</span>
         </div>
+        <p class="project-value"><strong>What it shows:</strong> Several services behind one gateway, with event logging through Kafka.</p>
         <div class="project-footer">
           <span class="project-date">Aug 2025 – Sep 2025</span>
           <div class="project-links">
             <a href="https://github.com/Nada-Mohamad123/Virtual_Bank_System" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Project 5 -->
       <div class="project-card reveal">
+        <div class="project-shot"><img src="assets/projects/healthybytes.svg" alt="HealthyBytes: recipe cards with nutrition bars" loading="lazy"></div>
+        <div class="project-body">
         <h4>HealthyBytes</h4>
         <p class="desc">A Flask web application for exploring categorized recipes with detailed nutritional information to promote healthy eating.</p>
         <div class="tech-tags">
           <span class="tech-tag">Flask</span><span class="tech-tag">Python</span>
           <span class="tech-tag">Recipe Management</span><span class="tech-tag">Nutrition Data</span>
         </div>
+        <p class="project-value"><strong>What it shows:</strong> Content-driven pages built on categorized data.</p>
         <div class="project-footer">
           <span class="project-date">Apr 2025 – May 2025</span>
           <div class="project-links">
             <a href="https://github.com/Nada-Mohamad123/HealthyBytes" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Project 6 -->
       <div class="project-card reveal">
+        <div class="project-shot"><img src="assets/projects/todolist.svg" alt="ToDoList: task list and a Docker container" loading="lazy"></div>
+        <div class="project-body">
         <h4>ToDoList</h4>
         <p class="desc">A Flask-based task management application with create, read, and update features, containerized using Docker for easy deployment.</p>
         <div class="tech-tags">
           <span class="tech-tag">Flask</span><span class="tech-tag">Python</span><span class="tech-tag">Docker</span>
         </div>
+        <p class="project-value"><strong>What it shows:</strong> Create, read and update operations, packaged in a container.</p>
         <div class="project-footer">
           <span class="project-date">Apr 2025 – May 2025</span>
           <div class="project-links">
             <a href="https://github.com/Nada-Mohamad123/Flask_website-todolist-" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
           </div>
         </div>
+        </div>
       </div>
 
       <!-- Project 7 -->
       <div class="project-card reveal">
+        <div class="project-shot"><img src="assets/projects/udemy.svg" alt="Udemy Courses Analysis: bar chart, trend line and scatter plot" loading="lazy"></div>
+        <div class="project-body">
         <h4>Udemy Courses Analysis</h4>
         <p class="desc">Analyzed datasets using Python, performed exploratory data analysis (EDA), and presented insights with visualizations. Final project of the NTI internship.</p>
         <div class="tech-tags">
@@ -296,11 +443,13 @@
           <span class="tech-tag">Pandas</span><span class="tech-tag">NumPy</span>
           <span class="tech-tag">Matplotlib</span><span class="tech-tag">Scikit-learn</span>
         </div>
+        <p class="project-value"><strong>What it shows:</strong> Exploratory analysis and clear visualizations.</p>
         <div class="project-footer">
           <span class="project-date">Aug 2024 – Sep 2024</span>
           <div class="project-links">
             <a href="https://github.com/Nada-Mohamad123/Udemy-Courses-Analysis" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fa-brands fa-github"></i> View Project</a>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -309,54 +458,76 @@
 
 <div class="wrap"><div class="divider-line"></div></div>
 
-<!-- ============ SKILLS ============ -->
-<section id="skills">
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Skills</p>
-      <h2>Technical Toolkit</h2>
+      <p class="eyebrow">05</p>
+      <h2>Experience</h2>
     </div>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <h4><i class="fa-solid fa-code"></i> Programming Languages</h4>
-        <div class="badge-row">
-          <span class="badge">Python</span><span class="badge">Java</span><span class="badge">C</span>
-          <span class="badge">C++</span><span class="badge">C#</span><span class="badge">SQL</span><span class="badge">Kotlin</span>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="role">Applications Development Integration Intern</p>
+          <p class="org">Ejada Systems</p>
+          <div class="timeline-meta">
+            <span><i class="fa-solid fa-calendar"></i> August 2025 – September 2025</span>
+            <span><i class="fa-solid fa-location-dot"></i> Assiut, Egypt</span>
+          </div>
+          <p class="desc">An internship in the Enterprise Applications Development Integration department, working on the kind of back-end integration that large companies run on: services that expose APIs, talk to each other through a gateway and exchange events.</p>
+
+          <div class="exp-cols">
+            <div class="exp-block">
+              <h5><i class="fa-solid fa-laptop-code"></i> What I worked on</h5>
+              <ul class="exp-list">
+                <li>Built backend services with Java and Spring Boot and exposed them as REST APIs.</li>
+                <li>Routed API traffic through a WSO2 API Gateway instead of calling services directly.</li>
+                <li>Used Apache Kafka so services could exchange events and log activity without being tightly coupled.</li>
+                <li>Packaged the services with Docker so the whole system could be started the same way every time.</li>
+              </ul>
+            </div>
+            <div class="exp-block">
+              <h5><i class="fa-solid fa-graduation-cap"></i> What I learned</h5>
+              <ul class="exp-list">
+                <li>How enterprise systems are connected: API gateways, message brokers and service-to-service calls.</li>
+                <li>How to divide an application into microservices and keep each service responsible for one thing.</li>
+                <li>How to work to a professional brief and deliver within a fixed time frame.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-tools">
+            <span class="exp-tools-label">Tools</span>
+            <span class="badge">Java</span><span class="badge">Spring Boot</span><span class="badge">Spring Integration</span><span class="badge">REST APIs</span><span class="badge">WSO2</span><span class="badge">Kafka</span><span class="badge">Docker</span><span class="badge">Git</span>
+          </div>
+
+          <p class="exp-value"><strong>What this means for you:</strong> I already know the tools used in enterprise integration work, so I can contribute to a project without a long ramp-up.</p>
+          <a href="#projects" class="cert-link"><i class="fa-solid fa-arrow-right-long"></i> See the Virtual Bank project</a>
         </div>
       </div>
-      <div class="skill-card reveal">
-        <h4><i class="fa-solid fa-robot"></i> Machine Learning & AI</h4>
-        <div class="badge-row">
-          <span class="badge">Scikit-learn</span><span class="badge">Pandas</span><span class="badge">NumPy</span>
-          <span class="badge">Data Preprocessing</span><span class="badge">Model Training</span><span class="badge">Model Evaluation</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">06</p>
+      <h2>Education</h2>
+    </div>
+    <div class="edu-panel reveal">
+      <div class="edu-info">
+        <p class="degree">Bachelor's Degree in Computer and Information Science</p>
+        <p class="major">Major: Software Engineering</p>
+        <div class="edu-meta">
+          <div><i class="fa-solid fa-calendar"></i> 2022 – 2026</div>
         </div>
       </div>
-      <div class="skill-card reveal">
-        <h4><i class="fa-solid fa-diagram-project"></i> Application Integration</h4>
-        <div class="badge-row">
-          <span class="badge">REST & API Integration</span><span class="badge">Microservices</span>
-          <span class="badge">Kafka & WebSockets</span><span class="badge">Spring Integration & WSO2</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h4><i class="fa-solid fa-chart-simple"></i> Data Analysis</h4>
-        <div class="badge-row">
-          <span class="badge">Excel</span><span class="badge">Power BI</span><span class="badge">Tableau</span>
-          <span class="badge">Python</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span><span class="badge">Seaborn</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h4><i class="fa-solid fa-toolbox"></i> Frameworks & Tools</h4>
-        <div class="badge-row">
-          <span class="badge">Spring Boot</span><span class="badge">Flask</span><span class="badge">Git</span>
-          <span class="badge">Jupyter Notebook</span><span class="badge">VS Code</span><span class="badge">Docker</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h4><i class="fa-solid fa-people-group"></i> Soft Skills</h4>
-        <div class="badge-row">
-          <span class="badge">Teamwork</span><span class="badge">Problem Solving</span><span class="badge">Communication</span>
-        </div>
+      <div class="gpa-panel">
+        <div class="gpa-number" data-count="3.94">3.94</div>
+        <p class="gpa-sub">out of 4.00 GPA</p>
+        <div class="gpa-grade">Grade A</div>
       </div>
     </div>
   </div>
@@ -368,14 +539,14 @@
 <section id="certificates">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Certificates</p>
-      <h2>Certificates &amp; Courses</h2>
-      <p>Every certificate I've earned — training programmes, internships, community work and competitions — collected in one place.</p>
+      <p class="eyebrow">07</p>
+      <h2>Certificates</h2>
+      <p>Training programs, an internship, community work and competitions, all in one place.</p>
     </div>
 
     <div class="cert-filters reveal" id="certFilters">
       <button class="cert-filter active" data-filter="all">All <span class="f-count">6</span></button>
-      <button class="cert-filter" data-filter="training">Training &amp; Courses <span class="f-count">3</span></button>
+      <button class="cert-filter" data-filter="training">Training <span class="f-count">3</span></button>
       <button class="cert-filter" data-filter="internship">Internship <span class="f-count">1</span></button>
       <button class="cert-filter" data-filter="community">Community <span class="f-count">1</span></button>
       <button class="cert-filter" data-filter="competition">Competition <span class="f-count">1</span></button>
@@ -435,13 +606,13 @@
       <!-- 4. GDG On Campus -->
       <article class="cert-card reveal" data-cat="community">
         <button class="cert-shot" data-lightbox="assets/gdg_certificate.jpg" aria-label="Enlarge the GDG On Campus certificate">
-          <img src="assets/gdg_certificate.jpg" alt="Certificate of Appreciation — Google Developer Group On Campus, Assiut University, Data Analysis Member" loading="lazy">
+          <img src="assets/gdg_certificate.jpg" alt="Certificate of Appreciation — Google Developer Group On Campus, Data Analysis Member" loading="lazy">
           <span class="cert-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
         </button>
         <div class="cert-body">
           <div class="cert-tags"><span class="cert-cat">Community</span></div>
           <h4>Certificate of Appreciation — Data Analysis Member</h4>
-          <p class="cert-org">Google Developer Group On Campus · Assiut University</p>
+          <p class="cert-org">Google Developer Group On Campus</p>
           <p class="cert-meta"><i class="fa-solid fa-calendar"></i> 2024 – 2025 academic year &nbsp;·&nbsp; <i class="fa-solid fa-hashtag"></i> AU-GDG01-AALAA-V1OLJ2</p>
           <p class="desc">Awarded for serving a full academic year as a Data Analysis member in a Google-affiliated student developer community.</p>
           <a href="#activities" class="cert-link"><i class="fa-solid fa-arrow-right-long"></i> More about this role</a>
@@ -454,7 +625,7 @@
                 data-lightbox="assets/icpc_certificate.jpg"
                 data-gallery='["assets/icpc_certificate.jpg","assets/icpc_certificate_team.jpg"]'
                 aria-label="Enlarge the ICPC ECPC certificates">
-          <img src="assets/icpc_certificate.jpg" alt="ICPC Certificate of Achievement — 2024 ECPC Qualifications, Assiut University" loading="lazy">
+          <img src="assets/icpc_certificate.jpg" alt="ICPC Certificate of Achievement — 2024 ECPC Qualifications" loading="lazy">
           <span class="cert-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
           <span class="cert-count"><i class="fa-regular fa-images"></i> 2</span>
         </button>
@@ -463,7 +634,7 @@
           <h4>Certificate of Achievement — ICPC ECPC Qualifications 2024</h4>
           <p class="cert-org">International Collegiate Programming Contest</p>
           <p class="cert-meta"><i class="fa-solid fa-calendar"></i> 25 July 2024 &nbsp;·&nbsp; <i class="fa-solid fa-ranking-star"></i> 151st place</p>
-          <p class="desc">Individual and team certificates from the 2024 ECPC Qualifications (Day 6), competing for Assiut University alongside Sohila Ahmed Usama and Jannah Ayman, coached by Hussien Ibrahiem.</p>
+          <p class="desc">Individual and team certificates from the 2024 ECPC Qualifications (Day 6), competing as a team of three with Sohila Ahmed Usama and Jannah Ayman, coached by Hussien Ibrahiem.</p>
         </div>
       </article>
 
@@ -491,9 +662,9 @@
 <section id="activities">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Beyond the Classroom</p>
+      <p class="eyebrow">08</p>
       <h2>Activities &amp; Languages</h2>
-      <p>Community work and competitive programming alongside my degree. The certificates for these live in the <a href="#certificates" class="inline-link">Certificates</a> section.</p>
+      <p>Community work and competitive programming alongside my degree. The matching certificates are in the <a href="#certificates" class="inline-link">Certificates</a> section.</p>
     </div>
     <div class="act-lang-grid">
       <div class="reveal">
@@ -503,7 +674,7 @@
             <span class="activity-ic"><i class="fa-brands fa-google"></i></span>
             <div>
               <h4>Data Analysis Member</h4>
-              <p class="activity-org">GDG On Campus · Assiut University</p>
+              <p class="activity-org">GDG On Campus</p>
             </div>
             <span class="activity-year">2024 – 2025</span>
           </div>
@@ -526,7 +697,7 @@
             </div>
             <span class="activity-year">2024</span>
           </div>
-          <p>Competed in the 2024 ECPC Qualifications representing Assiut University — a timed, team-based algorithmic contest under the ICPC umbrella.</p>
+          <p>Competed in the 2024 ECPC Qualifications as part of a team — a timed, team-based algorithmic contest under the ICPC umbrella.</p>
           <ul class="activity-points">
             <li>Placed <strong>151st</strong> in the Day 6 qualification round, 25 July 2024.</li>
             <li>Team of three: Sohila Ahmed Usama, Jannah Ayman and myself, coached by Hussien Ibrahiem.</li>
@@ -557,9 +728,9 @@
 <section id="contact">
   <div class="wrap contact-grid">
     <div class="contact-info reveal">
-      <p class="eyebrow">Contact</p>
-      <h2>Let's Work Together</h2>
-      <p>I'm always interested in learning, building useful solutions, and working on real-world technology projects.</p>
+      <p class="eyebrow">09</p>
+      <h2>Contact</h2>
+      <p>Have a backend or integration project in mind? Send me a message and I will reply by email.</p>
       <div class="contact-list">
         <div class="contact-row">
           <a href="mailto:nadamohamadmaklouf@gmail.com" aria-label="Send me an email">
