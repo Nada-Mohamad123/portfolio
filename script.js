@@ -248,3 +248,36 @@ if (contactForm) {
     }
   });
 }
+
+// ============ Theme toggle (dark / light) ============
+// The initial theme is applied by a tiny inline script in <head> so the page
+// never flashes the wrong colours. This part handles the button and remembers
+// the choice in localStorage.
+const themeToggle = document.getElementById('themeToggle');
+const htmlEl = document.documentElement;
+
+function applyTheme(theme, save){
+  htmlEl.setAttribute('data-theme', theme);
+  if (themeToggle) {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    themeToggle.setAttribute('aria-label', `Switch to ${next} mode`);
+    themeToggle.setAttribute('title', `Switch to ${next} mode`);
+  }
+  if (save) {
+    try { localStorage.setItem('theme', theme); } catch (err) { /* storage blocked: ignore */ }
+  }
+  window.dispatchEvent(new Event('themechange'));
+}
+
+if (themeToggle) {
+  applyTheme(htmlEl.getAttribute('data-theme') === 'light' ? 'light' : 'dark', false);
+  themeToggle.addEventListener('click', () => {
+    const next = htmlEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    htmlEl.classList.add('theme-anim');
+    themeToggle.classList.remove('spin');
+    void themeToggle.offsetWidth;
+    themeToggle.classList.add('spin');
+    applyTheme(next, true);
+    setTimeout(() => htmlEl.classList.remove('theme-anim'), 500);
+  });
+}
